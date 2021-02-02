@@ -9,29 +9,33 @@
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
-  <title>Document</title>
+  <title>Sorting Hat</title>
 </head>
 <body>
   
+  <div class="container">
+
   <!-- jumbotron -->
-  <div class="jumbotron jumbotron-fluid justify-content-center text-center row align-items-center mt-5">
+  <div class="jumbotron">
     <h1 class="display-4">Welcome to Hogwarts!</h1>
-    <p class="lead mt 3">Let's begin the process!</p>
+    <p class="lead">Your house will be chosen for you.</p>
+    <p class="lead">Prefect’s bathroom Trelawney veela squashy armchairs, SPEW: Gamp’s Elemental Law of Transfiguration. Magic Nagini bezoar, Hippogriffs Headless Hunt giant squid petrified. Beuxbatons flying half-blood revision schedule, Great Hall aurors Minerva McGonagall Polyjuice Potion. Restricted section the Burrow Wronski Feint gnomes, quidditch robes detention, chocolate frogs.
+    </p>
     <hr class="my-4">
-    <p>
-      <a class="btn btn-primary btn-lg mt-3" href="#" role="button">Let's Start Sorting</a>
+<p>
+      <button type="button" class="btn btn-primary btn-lg" role="button" id="btn">Let's Start Sorting!</button>
     </p>
   </div>
-
+<br>
+<br>
+<br>
 <!-- student name form and button -->
-<form id="name-form">
-  <div class="text-center">
-    <input type="text" class="form-control mt-2" id="name" placeholder="Enter your name" required />
-    <a class="btn btn-info btn-lg mt-4" href="#" role="button">Let's see what you get!</a>
-  </div>
-  </form>
+<div class="d-flex flex-wrap justify-content-evenly" id="form"></div>
 
-<!-- card -->
+<!--  student card -->
+<div class="d-flex flex-wrap justify-content-evenly" id="students"></div>
+
+</div>
 
 
   <script
