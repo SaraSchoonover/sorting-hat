@@ -1,7 +1,7 @@
 console.log("CONNECTED");
 
 
-const houses = []; 
+const studentName = []; 
 const hogwartsHouse = ["Ravenclaw", "Gryffindor", "Slytherin", "Hufflepuff"];
 
 const printToDom = (divId, textToPrint) => {
@@ -20,24 +20,26 @@ const createForm = () => {
   </form>`
 
   printToDom('#form', formString);
+   document.querySelector('form').addEventListener('submit', getFormInfo);
   
 };
 
 const getFormInfo = (e) => {
   e.preventDefault();
 
-  const name = document.querySelector('#students').value;
+  
+  const name = document.querySelector('#student').value;
   const house = hogwartsHouse[Math.floor(Math.random() * hogwartsHouse.length)];
 
   const obj = {
     name,
     house,
   };
-  houses.push(obj);
+  studentName.push(obj);
 
-  cardBuilder(houses);
-  console.log(houses);
-  document.querySelector('form').reset();
+  cardBuilder(studentName);
+  console.log(studentName);
+   document.querySelector('form').reset();
 }
 
 
@@ -45,32 +47,41 @@ const getFormInfo = (e) => {
 const cardBuilder = (arr) => {
   let domString = "";
 
-  
   for (let i = 0; i < arr.length; i++) {
-    domString += `<div class="student-card" style="width: 18rem;" id=${i}>
+    domString += `<div class="card m-1" style="width: 18rem;" id=${i}>
   
                     <div class="card-body">
                     <h5 class="card-title">${arr[i].name}</h5>
                       <p class="card-text">${arr[i].house}</p>
-                      <button type="button" class="btn btn-danger" id="${arr[i].id}">Expel</button>
+                      <button type="button" class="btn btn-danger" id="${i}">Expel</button>
                     </div>
                   </div>`;
   }
 
   printToDom('#students', domString);
+  //  document.querySelector('form').addEventListener('submit', getFormInfo);
+
+};
+
+const expelStudent = (e) => {
+const targetType = e.target.type;
+const targetId = e.target.id;
+
+
+
 }
 
 const buttonEvents = () => {
 	document.querySelector('#btn').addEventListener('click', createForm);
   // document.querySelector('#sort').addEventListener('click', createForm);
-  document.querySelector('form').addEventListener('submit', getFormInfo);
+  // document.querySelector('form').addEventListener('submit', getFormInfo);
 };
 
 
 
 const init = () => {
   buttonEvents();
-  // cardBuilder(houses);
+  // cardBuilder(studentName);
 };
 
 init();
