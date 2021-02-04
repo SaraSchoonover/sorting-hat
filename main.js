@@ -4,7 +4,8 @@ console.log("CONNECTED");
 const studentName = []; 
 const hogwartsHouse = ["Ravenclaw", "Gryffindor", "Slytherin", "Hufflepuff"];
 const voldemortsArmy = [];
-
+let newStudentId = [1];
+const colors [];
 
 const printToDom = (divId, textToPrint) => {
   const selectedDiv = document.querySelector(divId);
@@ -37,11 +38,18 @@ const getFormInfo = (e) => {
     .map((student) => student.id)
     .sort((a, b) => a - b);
 
-  const id = studentIds.length ? studentIds[studentIds.length - 1] + 1 : 1;
+  // const id = studentIds.length ? studentIds[studentIds.length - 1] + 1 : 1;
+  let id = 0;
+  if (studentIds.length > 0) {
+   id = studentIds[studentIds.length - 1] + 1;
+  } else {
+    // id = 0;
+  }
 
   const obj = {
     name,
     house,
+    id,
   };
   studentName.push(obj);
 
@@ -72,13 +80,19 @@ const cardBuild = (arr) => {
 };
 
 const expelStudent = (e) => {
-const targetType = e.target.type;
-const targetId = e.target.id;
+ 
+//const targetType = e.target.type;
+// const targetId = e.target.id;
 
-if (targetType === 'button') {
-  const studentIndex = studentName.findIndex(student => student.id === targetId);
-    let expel = studentName.splice(studentIndex, 1);
-     voldemortsArmy.push(...expel);
+if (e.target.type === 'button') {
+  console.log(e.target.id);
+  const studentObject = studentName.find(student => student.id == e.target.id);
+  studentName.pop(studentObject);
+  voldemortsArmy.push(studentObject);
+  console.log(studentObject);
+    // let expel = studentName.splice(1, studentIndex);
+    // console.log(expel);
+    //  voldemortsArmy.push(...expel);
  }
  cardBuild(studentName);
  armyBuild(voldemortsArmy);
