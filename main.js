@@ -3,7 +3,7 @@ console.log("CONNECTED");
 
 const studentName = []; 
 const hogwartsHouse = ["Ravenclaw", "Gryffindor", "Slytherin", "Hufflepuff"];
-const voldemoortsArmy = [];
+const voldemortsArmy = [];
 
 
 const printToDom = (divId, textToPrint) => {
@@ -18,7 +18,7 @@ const createForm = () => {
   <label for="student" class="form-label">Student's Name</label>
   <input type="text" class="form-control" id="student" placeholder="Enter your name" required>
   </div>
-  <button type="submit" class="btn btn-form" id="sort">Let's Start Sorting!</button>
+  <button type="submit" class="btn btn-dark" id="sort">Begin!</button>
   </form>`
 
   printToDom('#form', formString);
@@ -45,20 +45,20 @@ const getFormInfo = (e) => {
   };
   studentName.push(obj);
 
-  cardBuilder(studentName);
+  cardBuild(studentName);
   console.log(studentName);
    document.querySelector('form').reset();
 }
 
 
 //student card//
-const cardBuilder = (arr) => {
+const cardBuild = (arr) => {
   let domString = "";
 
   for (let i = 0; i < arr.length; i++) {
     domString += `<div class="card m-1" style="width: 18rem;" id=${i}>
   
-                    <div class="card-body">
+                    <div class="card-body1">
                     <h5 class="card-title">${arr[i].name}</h5>
                       <p class="card-text">${arr[i].house}</p>
                       <button type="button" class="btn btn-danger" id="${i}">Expel</button>
@@ -77,10 +77,30 @@ const targetId = e.target.id;
 
 if (targetType === 'button') {
   const studentIndex = studentName.findIndex(student => student.id === targetId);
-    studentName.splice(studentIndex, 1);
+    let expel = studentName.splice(studentIndex, 1);
+     voldemortsArmy.push(...expel);
  }
- cardBuilder(studentName);
+ cardBuild(studentName);
+ armyBuild(voldemortsArmy);
+ console.log(voldemortsArmy);
 }
+
+const armyBuild = (arr) => {
+  let domString = '';
+
+  for (let i = 0; i < arr.length; i++) {
+    domString += `<div class="card m-1" style="width: 18rem;" id=${i}>
+  
+    <div class="card-body2">
+    <h4>Voldemort's Army</h4>
+    <h4 class="card-title">${arr[i].name}</h4>
+      <p class="card-text">${arr[i].house}</p>
+     
+    </div>
+  </div>`;
+  }
+  printToDom('#army', domString);
+};
 
 // const handleButtonClick = () => {
 //   const buttonId = e.target.id;
