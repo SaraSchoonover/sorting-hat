@@ -1,3 +1,16 @@
 body {
-  background-color: rgb(111, 111, 114);
+  background-color: whitesmoke;
 }
+
+.card-body1 {
+background-color: darkgoldenrod;
+}
+
+.card-body2 {
+background-color: darkgreen;
+}
+
+/* 
+.card2 {
+  color: chocolate;
+}  */
