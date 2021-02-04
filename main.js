@@ -3,6 +3,8 @@ console.log("CONNECTED");
 
 const studentName = []; 
 const hogwartsHouse = ["Ravenclaw", "Gryffindor", "Slytherin", "Hufflepuff"];
+const voldemoortsArmy = [];
+
 
 const printToDom = (divId, textToPrint) => {
   const selectedDiv = document.querySelector(divId);
@@ -30,6 +32,12 @@ const getFormInfo = (e) => {
   
   const name = document.querySelector('#student').value;
   const house = hogwartsHouse[Math.floor(Math.random() * hogwartsHouse.length)];
+
+  const studentIds = studentName
+    .map((student) => student.id)
+    .sort((a, b) => a - b);
+
+  const id = studentIds.length ? studentIds[studentIds.length - 1] + 1 : 1;
 
   const obj = {
     name,
@@ -67,21 +75,39 @@ const expelStudent = (e) => {
 const targetType = e.target.type;
 const targetId = e.target.id;
 
-
-
+if (targetType === 'button') {
+  const studentIndex = studentName.findIndex(student => student.id === targetId);
+    studentName.splice(studentIndex, 1);
+ }
+ cardBuilder(studentName);
 }
+
+// const handleButtonClick = () => {
+//   const buttonId = e.target.id;
+
+//   // CHANGING BG COLOR BASED ON BUTTON CLICK
+//   if (buttonId === 'Slytherin') {
+//     // DARK MODE
+//     document.querySelector('students').style.backgroundColor = '#000';
+  
+
+// }
+
 
 const buttonEvents = () => {
 	document.querySelector('#btn').addEventListener('click', createForm);
-  // document.querySelector('#sort').addEventListener('click', createForm);
-  // document.querySelector('form').addEventListener('submit', getFormInfo);
+  document.querySelector('#students').addEventListener('click', expelStudent);
+  // document.querySelector('#btn').addEventListener('click', handleButtonClick);
+  // document.querySelector('#Doc').addEventListener('click', handleButtonClick);
+  // document.querySelector('#Aja').addEventListener('click', handleButtonClick);
+  // document.querySelector('#Trinity').addEventListener('click', handleButtonClick);
 };
 
 
 
 const init = () => {
   buttonEvents();
-  // cardBuilder(studentName);
+  
 };
 
 init();
