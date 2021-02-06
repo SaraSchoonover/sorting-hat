@@ -2,17 +2,18 @@ body {
   background-color: whitesmoke;
 }
 
-#jumbotron {
+/* #jumbotron {
   display: flex;
   justify-content: center;
   background: transparent !important;
-}
+} */
 
 .card-title {
   display: flex;
   justify-content: center;
   box-shadow: 2px grey;
   margin-bottom: 1px solid black;
+  font-style: italic;
 }
 
 #pic-img {

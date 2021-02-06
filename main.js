@@ -23,8 +23,8 @@ const printToDom = (divId, textToPrint) => {
 const createForm = () => {
   let formString = `<form>
   <div class="mb-3">
-  <label for="student" class="form-label">Student's Name</label>
-  <input type="text" class="form-control" id="student" placeholder="Enter your name" required>
+  <label for="student" class="form-label">Enter first year's name</label>
+  <input type="text" class="form-control" id="student" placeholder="Enter you name" required>
   </div>
   <button type="submit" class="btn btn-dark" id="sort">Begin!</button>
   </form>`
