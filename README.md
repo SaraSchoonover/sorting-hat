@@ -50,3 +50,32 @@ Think of a way you can expel students without just hiding those divs on the page
 - House Colors: The color of the student's card changes depending on which house they were sorted. 
 - Card Ordering: Sort the student cards by some criteria (i.e. alphabetically by name, by house)
 - Voldermort's Army: Create a separate container of cards that hold the cards for students that have been expelled. These should be styled differently from Hogwarts students.
+
+DATE: Feb 2021
+
+PROJECT NAME: Sorting Hat
+
+PROJECT OVERVIEW: 
+
+
+WIREFRAME: 
+
+LOOM VIDEO DEMO: https://www.loom.com/share/796ba77cb3c344e1833ba243fdfc01d1
+
+NELIFY WEBSITE: 
+
+PROJECT BOARD: https://github.com/SaraSchoonover/sorting-hat/projects/1
+
+USER STORY: 
+-User navigates to a page with a button that explains when the button is clicked.
+-once button is clicked, a form containing another button then pops up to input user's name.
+-User is sorted in a random Harry Potter house.
+-Once sorted into a house, the user can then expel the card with the expel button.
+-card is then moved to Voldemort's Army card.
+
+ 
+SCREENSHOTS:
+
+CONTRIBUTORS: 
+
+Credits: 
