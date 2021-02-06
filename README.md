@@ -55,14 +55,15 @@ DATE: Feb 2021
 
 PROJECT NAME: Sorting Hat
 
-PROJECT OVERVIEW: 
+PROJECT OVERVIEW: A randomly generated card via button press that places student into a Harry Potter house with a card that then expels
+student into Voldemort's Army via another button.
 
 
 WIREFRAME: 
 
 LOOM VIDEO DEMO: https://www.loom.com/share/796ba77cb3c344e1833ba243fdfc01d1
 
-NELIFY WEBSITE: 
+NELIFY WEBSITE: https://601e117c3966b2d50306baa8--ss-sorting-hat.netlify.app
 
 PROJECT BOARD: https://github.com/SaraSchoonover/sorting-hat/projects/1
 
@@ -74,7 +75,11 @@ USER STORY:
 -card is then moved to Voldemort's Army card.
 
  
-SCREENSHOTS:
+SCREENSHOTS: <img width="1792" alt="Screen Shot 2021-02-05 at 9 52 08 PM" src="https://user-images.githubusercontent.com/25774314/107108345-d0f3f300-67fc-11eb-86d7-8d083f62e058.png">
+<img width="1792" alt="Screen Shot 2021-02-05 at 9 52 24 PM" src="https://user-images.githubusercontent.com/25774314/107108347-d3564d00-67fc-11eb-988c-cb67d1949844.png">
+<img width="1792" alt="Screen Shot 2021-02-05 at 9 52 44 PM" src="https://user-images.githubusercontent.com/25774314/107108349-d5201080-67fc-11eb-950c-76dcbce23256.png">
+<img width="1792" alt="Screen Shot 2021-02-05 at 9 52 53 PM" src="https://user-images.githubusercontent.com/25774314/107108352-d81b0100-67fc-11eb-9106-7ba579f87f9a.png">
+
 
 CONTRIBUTORS: 
 
