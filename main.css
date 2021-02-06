@@ -2,15 +2,33 @@ body {
   background-color: whitesmoke;
 }
 
-/* .card-body1 {
-background-color: darkgoldenrod;
+
+.card-title {
+  display: flex;
+  justify-content: center;
+  box-shadow: 2px grey;
+  margin-bottom: 1px solid black;
 }
 
-.card-body2 {
-background-color: darkgreen;
-} */
+#pic-img {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-top: 2em;
+  height: 15em;
+}
 
-/* 
-.card2 {
-  color: chocolate;
-}  */
+.card-text {
+  display: flex;
+  justify-content: center;
+}
+
+.voldy {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-top: 2em;
+  height: 15em;
+}
+
+.card-title2 {
+  justify-content;
+}
