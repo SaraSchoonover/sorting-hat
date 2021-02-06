@@ -2,6 +2,11 @@ body {
   background-color: whitesmoke;
 }
 
+#jumbotron {
+  display: flex;
+  justify-content: center;
+  background: transparent !important;
+}
 
 .card-title {
   display: flex;
